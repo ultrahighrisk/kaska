@@ -7,10 +7,10 @@ local function setup(options)
     local trs = "none"
     bg =  options.transparent and trs or bg
 
-    local bgs = "#141414"
+    local bgs = "#333333"
     local fg = "#cfcfcf"
     local cmt = "#646464"
-    local str = "#F9A9A1"
+    local str = "#f56a40"
     local sct = "#555555"
     local sctb = "#333333"
     local idnt = "#6C9D92"
