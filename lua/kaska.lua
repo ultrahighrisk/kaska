@@ -5,21 +5,23 @@ local function setup(options)
 
     local bg = "#080A08"
     local trs = "none"
-    bg =  options.transparent and trs or bg
+    bg = options.transparent and trs or bg
 
     local bgs = "#333333"
     local fg = "#cfcfcf"
-    local cmt = "#646464"
-    local str = "#f56a40"
-    local sct = "#555555"
+    local cmt = "#555555"
+    local str = "#ffffff"
+    local sct = "#aaaaaa"
     local sctb = "#333333"
-    local idnt = "#6C9D92"
-    local num = "#6aa6a6"
+    local idnt = str
+    local num = str
     local nn = "#444444"
-    -- local rr =   "#7d7061"
-    local vr = "#e6b88c"
-    local fn = "#79ad72"
-    local stmt = "#cf9795"
+    local cur = "#a11811"
+    local srch = "#a1f811"
+    local srchs = "#8faf1f"
+    local vr = "#ccc8b8"
+    local fn = "#dbdad5"
+    local stmt = str
 
     local warning = "#f7e697"
     local error = "#f06559"
@@ -28,6 +30,8 @@ local function setup(options)
 
     vim.api.nvim_set_hl(0, "Normal", { fg = fg, bg = bg })
     vim.api.nvim_set_hl(0, "Visual", { fg = trs, bg = sctb })
+    vim.api.nvim_set_hl(0, "Search", { fg = srch, bg = bg })
+    vim.api.nvim_set_hl(0, "CurSearch", { fg = bgs, bg = srch })
     vim.api.nvim_set_hl(0, "NonText", { fg = nn })
     vim.api.nvim_set_hl(0, "Special", { fg = fn })
     vim.api.nvim_set_hl(0, "Directory", { fg = vr })
@@ -50,7 +54,7 @@ local function setup(options)
     vim.api.nvim_set_hl(0, "StatusLine", { fg = vr, bg = sctb })
     vim.api.nvim_set_hl(0, "VertSplit", { fg = sctb })
     vim.api.nvim_set_hl(0, "WinSeparator", { fg = sctb })
-    vim.api.nvim_set_hl(0, "MatchParen", { fg = fg, bg = fn })
+    vim.api.nvim_set_hl(0, "MatchParen", { fg = bg, bg = cur })
     vim.api.nvim_set_hl(0, "CursorLine", { bg = bgs })
     vim.api.nvim_set_hl(0, "CursorLineNr", { bg = bgs })
     vim.api.nvim_set_hl(0, "TelescopeMatching", { fg = fg, bg = bgs })
