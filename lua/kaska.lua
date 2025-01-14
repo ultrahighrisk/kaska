@@ -9,14 +9,14 @@ local function setup(options)
 
     local pri = "#9BD53E"
     local sec = "#C7B1FA"
-    local bgs = "#333333"
+    local bgs = "#1a1a1a"
     local fg = "#cfcfcf"
     local cmt = "#555555"
     local str = sec
     local sct = "#aaaaaa"
-    local sctb = "#333333"
+    local sctb = bgs
     local num = str
-    local nn = "#444444"
+    local nn = "#333333"
     local idnt = pri
     local cur = fg
     local srch = pri
