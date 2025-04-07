@@ -4,11 +4,13 @@ local function setup(options)
     vim.o.background = 'dark'
 
     local bg = "#080A08"
+    local black = "#000000"
     local trs = "none"
     bg = options.transparent and trs or bg
 
-    local pri = "#9BD53E"
+    local pri = "#99c259"
     local sec = "#C7B1FA"
+    local vis = "#292929"
     local bgs = "#1a1a1a"
     local fg = "#cfcfcf"
     local cmt = "#555555"
@@ -22,7 +24,11 @@ local function setup(options)
     local srch = pri
     local vr = pri
     local fn = "#dbdad5"
-    local stmt = "#FF8A41"
+    local stmt = "#e68e57"
+
+    local gadd = "#88db2a"
+    local gdiff = "#f5c449"
+    local gremv = "#eb3e31"
 
     local warning = "#f7e697"
     local error = "#f06559"
@@ -30,10 +36,11 @@ local function setup(options)
     local hint = "#a187ff"
 
     vim.api.nvim_set_hl(0, "Normal", { fg = fg, bg = bg })
-    vim.api.nvim_set_hl(0, "Visual", { fg = nn, bg = pri })
+    vim.api.nvim_set_hl(0, "Visual", { bg = vis })
     vim.api.nvim_set_hl(0, "Search", { fg = srch, bg = bg })
     vim.api.nvim_set_hl(0, "CurSearch", { fg = bgs, bg = srch })
     vim.api.nvim_set_hl(0, "NonText", { fg = nn })
+    vim.api.nvim_set_hl(0, "ColorColumn", { fg = bgs, bg = bgs })
     vim.api.nvim_set_hl(0, "Special", { fg = fn })
     vim.api.nvim_set_hl(0, "Directory", { fg = vr })
     vim.api.nvim_set_hl(0, "Operator", { fg = sct })
@@ -65,8 +72,11 @@ local function setup(options)
     vim.api.nvim_set_hl(0, "EndOfBuffer", {})
     vim.api.nvim_set_hl(0, "DiffChange", {})
     vim.api.nvim_set_hl(0, "DiffAdd", {})
-    vim.api.nvim_set_hl(0, "Changed", { fg = num })
     vim.api.nvim_set_hl(0, "ModeMsg", { fg = pri })
+
+    vim.api.nvim_set_hl(0, "Changed", { fg = gdiff })
+    vim.api.nvim_set_hl(0, "Added", { fg = gadd })
+    vim.api.nvim_set_hl(0, "Removed", { fg = gremv })
 
     vim.api.nvim_set_hl(0, "DiagnosticWarn", { fg = warning })
     vim.api.nvim_set_hl(0, "DiagnosticError", { fg = error })
