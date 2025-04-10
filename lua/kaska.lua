@@ -8,8 +8,8 @@ local function setup(options)
     local trs = "none"
     bg = options.transparent and trs or bg
 
-    local pri = "#83d143"
-    local sec = "#b697fc"
+    local pri = "#73b33e"
+    local sec = "#6aa888"
     local vis = "#292929"
     local bgs = "#1a1a1a"
     local fg = "#cfcfcf"
@@ -17,14 +17,14 @@ local function setup(options)
     local str = sec
     local sct = "#aaaaaa"
     local sctb = bgs
-    local num = str
+    local num = "#fc5a4c"
     local nn = "#333333"
     local idnt = pri
     local cur = fg
     local srch = pri
     local vr = pri
     local fn = "#dbdad5"
-    local stmt = "#ff813d"
+    local stmt = "#e37336"
 
     local gadd = "#88db2a"
     local gdiff = "#f5c449"
