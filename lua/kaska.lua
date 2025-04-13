@@ -4,12 +4,12 @@ local function setup(options)
     vim.o.background = 'dark'
 
     local bg = "#080A08"
-    local black = "#000000"
     local trs = "none"
     bg = options.transparent and trs or bg
 
-    local pri = "#73b33e"
+    local pri = "#7bb54a"
     local sec = "#6aa888"
+    local pam = "#ffffff"
     local vis = "#292929"
     local bgs = "#1a1a1a"
     local fg = "#cfcfcf"
@@ -18,8 +18,8 @@ local function setup(options)
     local sct = "#aaaaaa"
     local sctb = bgs
     local num = "#fc5a4c"
-    local nn = "#333333"
-    local idnt = pri
+    local nn = "#303030"
+    local idnt = pam
     local cur = fg
     local srch = pri
     local vr = pri
@@ -65,6 +65,7 @@ local function setup(options)
     vim.api.nvim_set_hl(1, "MatchParen", { fg = bg, bg = pri })
     vim.api.nvim_set_hl(0, "CursorLine", { bg = bgs })
     vim.api.nvim_set_hl(0, "CursorLineNr", { bg = bgs })
+    vim.api.nvim_set_hl(0, "@string.special.url", { fg = num })
     vim.api.nvim_set_hl(0, "TelescopeMatching", { fg = srch, bg = bg })
     vim.api.nvim_set_hl(0, "TelescopeBorder", { fg = sctb })
     vim.api.nvim_set_hl(0, "TelescopeSelection", { fg = fg, bg = bgs })
@@ -73,6 +74,8 @@ local function setup(options)
     vim.api.nvim_set_hl(0, "DiffChange", {})
     vim.api.nvim_set_hl(0, "DiffAdd", {})
     vim.api.nvim_set_hl(0, "ModeMsg", { fg = pri })
+    vim.api.nvim_set_hl(0, "ErrorMsg", { fg = error })
+    vim.api.nvim_set_hl(0, "Question", { fg = sec })
 
     vim.api.nvim_set_hl(0, "Changed", { fg = gdiff })
     vim.api.nvim_set_hl(0, "Added", { fg = gadd })
