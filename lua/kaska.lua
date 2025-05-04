@@ -18,7 +18,7 @@ local function setup(options)
     local sct = "#aaaaaa"
     local sctb = bgs
     local num = "#fc5a4c"
-    local nn = "#303030"
+    local nn = "#222222"
     local idnt = pam
     local cur = fg
     local srch = pri
